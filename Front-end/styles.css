@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    background-color: rgb(220, 180, 46);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 100px;
+}
+
+/* Left section styling */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: underline;
+}
+
+/* Center title styling */
+.header h2 {
+    font-size: 40px;
+    margin: 0;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+/* Right section styling */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Link styling */
+.custom-link {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#chickenicon {
+    height: 70px;
+    width: 70px;
+    cursor: pointer
+    
+}
+
+/* Icon styling */
+#carticon, #loginicon, #searchicon, #instaicon,#minusicon,#plusicon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+}
+#carticon:hover, 
+#loginicon:hover, 
+#searchicon:hover, 
+#instaicon:hover {
+    transform: scale(1.2); /* Scale up the icon to 120% of its original size */
+}
+
+/* Search box styling */
+#searchbox {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+#searcheditem {
+    top:70px;
+    position: fixed;
+    left: 76.35%;
+    width: 200px;
+    height: auto;
+    background-color: wheat;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    z-index: 10; 
+    text-align: center;
+    display: none;
+}
+
+
+
+
+    /* Image and Overlay Styles */
+    .bodyimagediv {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        margin-top: 100px; /* Added margin to ensure content starts below the header */
+    }
+
+    #bodyimage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .content h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .content h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    /* Button Styles */
+    #orderOnline {
+        padding: 15px 30px;
+        font-size: 18px;
+        color: white;
+        background-color: #FF4500;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #orderOnline:hover {
+        background-color: #FF6347;
+    }
+
+    .tabdiv {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(220, 180, 46);
+    padding: 10px;
+    position: sticky; /* Makes it stick */
+    top: 100px; /* Align it just below the header */
+    z-index: 9; /* Lower than the header */
+    }
+
+    .tabdiv a {
+    color: black; /* Text color */
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    font-size: 20px;
+    padding: 10px 20px; /* Padding for the link */
+    margin: 0 10px; /* Space between the links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 20px;
+    }
+
+    .tabdiv a:hover {
+    background-color: wheat; /* Light background on hover */
+    color: #000000; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+
+    .tab {
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        color: white; /* Text color */
+    }
+
+    .tab:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    }
+
+    /* Content section */
+    .tab-content {
+        display: none; /* Hide content by default */
+        text-align: center;
+        color: black;
+        background-color: rgb(220, 180, 46);
+        padding: 10px;
+        z-index: 1; /* Lower than the header */
+    }
+
+    .active {
+        display: block; /* Show active content */
+    }
+
+    /* Hot Food Container */
+    #Food {
+        display: flex; /* Set display to flex */
+        flex-wrap: wrap; /* Allows wrapping to the next line if items overflow */
+        justify-content: center; /* Center items horizontally */
+        gap: 20px; /* Space between each item */
+        padding: 20px; /* Padding inside the container */
+    }
+
+    .hotFoodHeader {
+        width: 100%;
+        background-color: rgb(220, 180, 46); /* Optional background color */
+        text-align: left;
+        margin-bottom: 2px;
+    }
+
+    /* Hot Food Item Styles */
+    .hotFoodItem ,.combos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+        background-color: wheat;
+        border-radius: 8px;
+        transition: transform 0.2s;
+        width: 200px;
+        height: 300px;
+    }
+
+    .hotFoodItem img ,.combos img, #searcheditem img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        padding-bottom: 1px;
+    }
+    .hotFoodItem p,.combos p, #searcheditem p {
+        margin: 2px 0; /* Set top and bottom margin to 2px, left and right to 0 */
+    }
+    
+    .hotFoodItem:hover {
+        transform: scale(1.05); /* Slightly scale up on hover */
+        box-shadow: 0 2px 10px rgba(34, 28, 16, 0.3); /* Add shadow effect on hover */
+    }
+
+
+    .viewitem{
+        visibility: hidden;
+        position: fixed; /* Overlay effect */
+       top:40%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+        align-items: center;
+        gap: 5px;
+        max-width: fit-content;
+        background-color: wheat;
+        z-index:11;
+        padding: 30px;
+    }
+.formdiv{
+    align-self: start;
+}
+
+    #selecteditem,.formdiv{
+        display: flex;
+        flex-direction: row;
+        padding-right: 10px;
+        gap: 5px;
+    }
+
+    #b  {
+        display: flex;
+        flex-direction: column;
+        font-size: 20dpx;
+    }
+
+   #c,#d,#e{
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+    align-items: center;
+    gap: 10px;
+   }
+
+   #e button{
+    border-radius: 3px;
+    font-size: 24px;
+    padding: 1px;
+   }
+    
+    #about-us {
+        position: relative;
+        height: 80vh; /* Adjust height as needed */
+        overflow: hidden; /* Prevent overflow */
+    }
+    
+    .image-container {
+        position: relative;
+        height: 100%; /* Use full height of the section */
+        background-image: url('./Images/order-Online-img/family-photo.jpg'); /* Set the background image */
+        background-size: cover; /* Cover the entire container */
+        background-position: center; /* Center the background image */
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        z-index: 1; /* Ensure overlay is above the image */
+    }
+    
+    .text-content {
+        position: relative; /* Positioning this relative to the overlay */
+        z-index: 2; /* Higher z-index so text is above the overlay */
+        padding: 20px; /* Add padding for aesthetics */
+        display: flex; /* Flexbox for vertical alignment */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center content vertically */
+        height: 100%; /* Use full height of the section */
+        color: white; /* Change text color for visibility */
+        text-align: center; /* Center text */
+    }
+    
+    h2 {
+        margin-bottom: 20px; 
+    }
+    
+    p {
+        margin: 10px 0; /* Space between paragraphs */
+    }
+    
+
+
+
+
+#subscribe {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the two sections */
+    background-color: rgb(220, 180, 46); /* Set the background color */
+    padding: 40px; /* Add padding around the section */
+}
+
+.suscribe {
+    flex: 1; /* Allow this section to take available space */
+    margin-right: 40px; /* Add margin to separate from the right section */
+}
+
+.suscribe h2 {
+    font-size: 24px; /* Set font size for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.suscribe label {
+    display: block; /* Ensure labels are on new lines */
+    margin-top: 10px; /* Space above each label */
+}
+
+.suscribe input {
+    width: 100%; /* Make inputs full width */
+    padding: 10px; /* Add padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Space above inputs */
+}
+
+.suscribe button {
+    margin-top: 15px; /* Space above the button */
+    padding: 10px 15px; /* Padding for button */
+    background-color: #fff; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Change cursor to pointer */
+    font-weight: bold; /* Make button text bold */
+}
+
+.suscribe button:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+}
+
+.addingnewsection {
+    flex: 1; /* Allow this section to take available space */
+    /* Add any additional styles for the right section as needed */
+}
+
+
+
+
+
+footer {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the left and right sections */
+    align-items: flex-start; /* Align items to the top */
+    background-color: #6b6d3a; /* Background color for the footer */
+    
+}
+
+.findus {
+    display: flex; /* Flexbox for the social media and contact info */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center the items vertically */
+    max-width: 300px; /* Limit width of the findus section */
+    margin-left: 4px;
+    color: white;
+}
+
+.findus img {
+    width: 4px; /* Set width for the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between icons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#socialicons {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: 100%;
+}
+
+
+
+
+
