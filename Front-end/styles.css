@@ -269,7 +269,7 @@
 
 
     .viewitem{
-        visibility: hidden;
+        visibility: display;
         position: fixed; /* Overlay effect */
        top:40%;
         left: 50%;
