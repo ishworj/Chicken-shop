@@ -1,0 +1,16 @@
+*{
+ justify-content: center;
+ align-items: center;
+ justify-items: center;
+}
+
+.registerContainer{
+    align-self: center;
+    border: 1px solid rgb(236, 69, 69);
+    height: fit-content;
+    width: 20vh;
+    margin-top: 20vh;
+    padding: 10dvh;
+   display: none;
+}
+

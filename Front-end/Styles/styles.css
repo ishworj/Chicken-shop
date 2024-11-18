@@ -25,6 +25,7 @@
     align-items: center;
     gap: 15px;
     text-decoration: underline;
+    background-color: rgb(220, 180, 46);
 }
 
 /* Center title styling */
@@ -35,6 +36,7 @@
     flex: 1;
     text-align: center;
     color: white;
+    background-color: rgb(220, 180, 46);
 }
 
 /* Right section styling */
@@ -42,6 +44,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    background-color: rgb(220, 180, 46);
 }
 
 /* Link styling */
@@ -50,12 +53,14 @@
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
+    background-color: rgb(220, 180, 46);
 }
 
 #chickenicon {
     height: 70px;
     width: 70px;
-    cursor: pointer
+    cursor: pointer;
+    background-color: rgb(220, 180, 46);
     
 }
 
@@ -64,6 +69,7 @@
     height: 30px;
     width: 30px;
     cursor: pointer;
+    background-color: rgb(220, 180, 46);
 
 }
 #carticon:hover, 
@@ -268,22 +274,22 @@
     }
 
 
-    .viewitem{
-        visibility: display;
-        position: fixed; /* Overlay effect */
-       top:40%;
+    .viewitem {
+        visibility: hidden;
+        position: fixed;
+        top: 40%;
         left: 50%;
-        transform: translate(-50%, -50%); 
-        display: flex;
+        transform: translate(-50%, -50%);
         flex-direction: column;
         border-radius: 6px;
         align-items: center;
         gap: 5px;
         max-width: fit-content;
         background-color: wheat;
-        z-index:11;
+        z-index: 11;
         padding: 30px;
     }
+    
 .formdiv{
     align-self: start;
 }
@@ -324,7 +330,7 @@
     .image-container {
         position: relative;
         height: 100%; /* Use full height of the section */
-        background-image: url('./Images/order-Online-img/family-photo.jpg'); /* Set the background image */
+        background-image: url('../Images/order-Online-img/family-photo.jpg'); /* Set the background image */
         background-size: cover; /* Cover the entire container */
         background-position: center; /* Center the background image */
     }
@@ -408,8 +414,7 @@
 }
 
 .addingnewsection {
-    flex: 1; /* Allow this section to take available space */
-    /* Add any additional styles for the right section as needed */
+    visibility: hidden;
 }
 
 
@@ -440,14 +445,19 @@ footer {
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-#socialicons {
+#socialicons , #paymenticons {
     display: flex;
     flex-direction: row;
     gap: 4px;
     width: 100%;
 }
 
+.midfooter{
+    display: flex;
+    flex-direction: column;
+}
 
-
-
+#copyright {
+    padding-bottom:0px;
+}
 

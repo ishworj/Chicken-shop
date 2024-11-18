@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChickenGeorge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <body>
     <!--Header of the page-->
@@ -19,12 +19,12 @@
             <a href="#about-us" class="custom-link">About-us</a>
             <a href="#contact" class="custom-link">Contact-us</a>  
         </div>
-        <h2 onclick="window.location.href='index.html'">Chicken George</h2>
+        <h2 onclick="window.location.href='/'">Chicken George</h2>
         <div class="header-right">
             <input type="text" placeholder="Search our products" id="searchbox" >
             <img src="./Images/order-Online-img/search-icon.png" alt="search" id="searchicon">                
-            <img src="./Images/order-Online-img/shopping-cart.png" alt="cart" id="carticon">
-            <img src="./Images/order-Online-img/user-interface.png" alt="login" id="loginicon">
+            <img src="./Images/order-Online-img/shopping-cart.png" alt="cart" id="carticon" onclick=" window.location.href= '/cart' ">
+            <img src="./Images/order-Online-img/user-interface.png" alt="login" id="loginicon" onclick=" window.location.href= '/user' ">
         </div>
     </div>    
     </header>
@@ -56,24 +56,24 @@
             <div class="formdiv">
                 <form action="" method="post">
                     <!-- Quantity Field -->
-                    <did id="c">
+                    <div id="c">
                     <label for="quantity">Quantity</label>
-                        <button type="button" onclick="decrement()"><img src="./Images/order-Online-img/minus.png" alt="" id="minusicon"></button>
-                        <p >1</p>
-                        <button type="button" onclick="increment()"><img src="./Images/order-Online-img/plus.png" alt="" id="plusicon"></button>
+                        <button type="button" ><img src="./Images/order-Online-img/minus.png" alt="" id="minusicon"></button>
+                        <p id="quantityDisplay">1</p>
+                        <button type="button" ><img src="./Images/order-Online-img/plus.png" alt="" id="plusicon"></button>
                     
-                    </did>
+                    </div>
                     <!-- Cost Field -->
                     <div id="d">
-                        <label for="cost" style="font-size: 24px;">Cost</label>
-                    <p id="cost">$0.00</p>
+                        <label for="cost" style="font-size: 24px;">Cost: $</label>
+                    <p id="cost"></p>
                     </div>
                 </form>
             </div>
             <div id="e">
-                <button style="background-color: red;">Goback</button>
-                <button style="background-color: green;"  id="addToCart">Add to cart</button>
-                <button style="background-color: blue;" id="viewCart">Viewcart</button>
+                <button  style="background-color: red;" id="goback">Goback</button>
+                <button style="background-color: green;"  id="addToCart" >Add to cart</button>
+                <button style="background-color: blue;" id="viewCart" onclick="window.location.href='/cart'">Viewcart</button>
 
             </div>
         </div>
@@ -146,21 +146,27 @@
         <div class="suscribe">
             <h2>Subscribe News</h2>
             <form id="subscription-form">
-                <div></div>
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required>
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="confirm-email">Confirm Email:</label>
-                    <input type="email" id="confirm-email" name="confirm-email" required>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="confirm-email">Confirm Email:</label>
+                <input type="email" id="confirm-email" name="confirm-email" required>
+                
                 <button type="submit">Subscribe</button>
             </form>
+            
         </div>
 
         <div class="addingnewsection">
-            <h1>can add any feature or content</h1>
+            <h1>Thank you for suscribing </h1>
+            <p>check you emails to see the offers and news about chicken George</p>
+            <h2>Thank you</h2>
 
         </div>
         
@@ -176,12 +182,28 @@
             <img src="./Images/order-Online-img/phone-call.png" alt="phone" id="instaicon">
             <img src="./Images/order-Online-img/email.png" alt="mail" id="instaicon"/>
             </div>  
+            
+            
+        </div>
+        <div class="midfooter">
+            <p>FaQs</p>
+            <div class="paymenticons">
+                <img src="./Images/order-Online-img/phone-call.png" alt="phone" id="instaicon">
+            <img src="./Images/order-Online-img/email.png" alt="mail" id="instaicon"/>
+            </div>
+            <p id="copyright">&copy; 2024 Chicken George</p>
         </div>
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.34128709583!2d151.10233907555855!3d-34.00944957317315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b8660b7c8c1b%3A0xc2579e039ad61551!2sChicken%20George!5e0!3m2!1sen!2sau!4v1730329805060!5m2!1sen!2sau" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
-    <script src="script.js"></script>
-    <script src="Api.js"></script>
+
+
+
+    <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/Api.js"></script>
+    <script src="../Scripts/suscribe.js"></script>
+
+
 </body>
 </html>

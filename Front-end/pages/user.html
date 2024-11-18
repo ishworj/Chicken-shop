@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <link rel="stylesheet" href="../Styles/user.css">
+</head>
+<body>
+
+    <form id="registerForm">
+        <div class="registerContainer">
+            <h1>Register to chicken george</h1>
+            <label for="userName">User Name</label>
+            <input type="text" placeholder="johnedoe12" name="userName" id="userName" required><br>
+    
+            <label for="password">Password</label>
+            <input type="password" placeholder="yourPassword" name="password" id="password" required><br>
+    
+            <label for="email">Email</label>
+            <input type="email" placeholder="someone12@gmail.com" name="email" id="email" required><br>
+    
+            <label for="confirmemail">Confirm Email</label>
+            <input type="email" placeholder="someone12@gmail.com" name="confirmEmail" id="confirm-email" required><br>
+    
+            <input type="checkbox" name="subscribeStatus" id="subscribeStatus">
+            <label for="subscribeStatus">Do you want to subscribe us?</label><br>
+    
+            <button id="register-button" type="submit" disabled>Register</button>
+    
+            <p>Already have an account?</p>
+            <button type="button" onclick="displayLogin()">Sign in</button>
+        </div>
+    </form>
+
+
+    <div class="loginContainer">
+        <h1>Login to chicken george</h1>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="l-email">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="l-password">
+
+        <button disabled id="loginButton">Login</button>
+
+        <p>Dont have an account</p>
+        <button  onclick="displayRegister()">register here </button>
+    </div>
+    
+    
+    <script src="../Scripts/user.js"></script>
+</body>
+</html>

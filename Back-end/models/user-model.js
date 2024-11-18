@@ -15,6 +15,10 @@ const userSchema = mongoose.Schema({
         type: String,
         required : [true, " please add user password"]
     },
+    subscribeStatus:{
+        type:Boolean,
+        required :[false]
+    }
 },
 {timestamps: true}
 )

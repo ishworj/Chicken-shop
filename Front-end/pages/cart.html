@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yourCart</title>
+    <link rel="stylesheet" href="../Styles/cart.css">
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header">  
+            <div class="header-left">
+                <img src="./Images/order-Online-img/chicken.png" alt="img" id="chickenicon">
+                <img src="./Images/order-Online-img/instagram.png" 
+                alt="Instagram" 
+                onclick="window.open('//www.instagram.com/chicken_george_southgate?igshid=dmg2dnNwMzhodHNo', '_blank')" 
+                id="instaicon">       
+                <a href="/#about-us" class="custom-link">About-us</a>
+                <a href="/#contact" class="custom-link">Contact-us</a>  
+            </div>
+            <h2 onclick="window.location.href='/'">Chicken George</h2>
+            <div class="header-right">
+                <input type="text" placeholder="Search our products" id="searchbox" >
+                <img src="./Images/order-Online-img/search-icon.png" alt="search" id="searchicon">                
+                <img src="./Images/order-Online-img/shopping-cart.png" alt="cart" id="carticon">
+                <img src="./Images/order-Online-img/user-interface.png" alt="login" onclick="window.location.href='/user'" id="loginicon">
+            </div>
+        </div>    
+        </header>
+
+    <div class="mycarttext">
+        <h1>My cart</h1>
+        <img src="./Images/order-Online-img/chicken.png" alt="your cart is empty">
+        <br>
+        <button onclick="window.location.href='/#Food';
+        ">Back to menu</button>
+
+
+    </div>    
+        
+
+
+<main id="cartMain">
+
+    <div class="items">
+
+
+        <!-- <div class="item">
+                <div id="cartitemimg">
+                    <img src="./Images/order-Online-img/HotFood/Chicken-drumstics.jpg" alt="Selected Item" width="80" height="80">
+                </div>
+                
+                <div class="cartiteminfo">
+                    <p><strong>Tenderlions</strong></p>
+                    <p>Description of the item goes here.</p>
+                    <div class="customiseremove">
+                        <button>Remove</button>
+                    </div>
+                    
+                </div>
+            
+                <div class="plusminus">
+                    <button>-</button>
+                    <label >$</label>
+                    <p>$20</p>
+                    <button>+</button>
+                </div>  
+                
+                
+        </div>  -->
+
+    </div> 
+
+    <div class="orderDetails">
+        <h1> </h1>
+        <h2> </h2>
+        <button id="toCheckout">checkout <p>$66</p></button>
+    </div> 
+
+
+</main>
+<script src="../Scripts/cart.js"></script>
+</body>
+</html>

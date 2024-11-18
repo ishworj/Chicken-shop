@@ -23,7 +23,7 @@ function switchIcon() {
 // Real-time search function with feedback
 function searchAndDisplay(searchbox) {
     const searchTerm = searchbox.value.toLowerCase();
-    const listOfProducts = document.querySelectorAll('.hotFoodItem,.combos');
+    const listOfProducts = document.querySelectorAll('.hotFoodItem');
     let found = false;
 
     const searchedItemDiv = document.getElementById('searcheditem');
@@ -67,14 +67,3 @@ searchbox.addEventListener('input', function() {
     switchIcon()
 });
 
-
-
-searcheditem.addEventListener(click, ()=>{
-    
-})
-
-
-
-function fooddetails(){
-
-}

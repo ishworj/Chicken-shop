@@ -1,5 +1,4 @@
 const asyncHandler = require("express-async-handler");
-const mongoose  = require("mongoose");
 const product = require("../models/product-model");
 // @desc create a food
 //@route Post /api/food

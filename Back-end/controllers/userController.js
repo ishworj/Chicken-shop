@@ -6,10 +6,12 @@ const user = require("../models/user-model");
 //@route get /api/users/register
 //@access public 
 const registerUser = asyncHandler (async(req,res)=>{
-    const {username , email, password}= req.body;
+    const {username , email, password, subscribeStatus }= req.body;
+    console.log(req.body)
+    
     if (!username || !email || !password) {
         res.status(404);
-        throw new Error("All fields are mandatory");  
+        throw new Error("All fields are mandatorrrrry");  
     }
 
     const userAvailable = await user.findOne({email});
@@ -24,14 +26,22 @@ console.log(hashedPassword)
     const newUser = await user.create({
         username,
         email,
-       password:hashedPassword
+        password:hashedPassword,
+        subscribeStatus,
     });
+    
     if (newUser) {
-        res.status(201).json({id:newUser.id,email:newUser.email})
-    }else{
+        res.status(201).json({
+            message: 'User registered successfully!',  // Include a message
+            id: newUser.id,
+            email: newUser.email,
+            subscribeStatus: newUser.subscribeStatus,  // Sending subscribeStatus back too
+        });
+    } else {
         res.status(400);
-        throw new console.error("user data was not valid");
+        throw new Error("User data was not valid");
     }
+    
 })
 
 // @desc login the user
