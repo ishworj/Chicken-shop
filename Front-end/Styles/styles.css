@@ -461,3 +461,65 @@ footer {
     padding-bottom:0px;
 }
 
+
+
+
+@media (width<550px) {
+    *{
+        width: fit-content;
+    }
+    .header{
+        width: 100%;
+    }
+    .header-left a, #searchicon ,#searchbox {
+        display:none;
+    }
+    .header #instaicon{
+        display: none;
+    }
+
+    .text-content h2{
+        align-self: center;
+        
+    }
+
+    #subscribe {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        
+    }
+    .suscribe{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 40px;
+        width: 100%;
+        justify-content: center;
+    }
+    .suscribe h2{
+        align-self: center;
+    }
+
+    form{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        
+        
+    }
+
+    form > div{
+        display: flex;
+        align-self: center;  
+        gap: 1em;
+        align-items: center;
+        
+    }
+
+    
+
+
+}

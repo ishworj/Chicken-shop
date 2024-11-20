@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../Styles/admin.css">
 </head>
 <body>
-    <header>
         <header>
             <div class="header">  
                 <div class="header-left">
@@ -27,8 +26,9 @@
                     <img src="../Images/order-Online-img/shopping-cart.png" alt="cart" id="carticon">
                     <img src="../Images/order-Online-img/user-interface.png" alt="login" onclick="window.location.href='/user'" id="loginicon">
                 </div>
-            </div>    
-            </header>
+            </div> 
+
+        </header>
 
             <div class="features">
                 <button>Items</button>
@@ -42,7 +42,29 @@
             <div class="itemData" style="display:none;">
                 <label for="name">Name</label>
                 <input type="text" name="Name" id="name">
+                <label for="Description">Description</label>
+                <input type="text" name="Description" id="description">
+                <label for="price">Price</label>
+                <input type="text" name="Price" id="price">
+                <label for="image">Add a image</label>
+                <input type="file" name="Image" id="image">
+                <label for="category">Category</label>
+                <select name="category" id="Category">
+                    <option value="hotFood">hotFood</option>
+                    <option value="combos">combos</option>
+                    <option value="Drinks">Drinks</option>
+                    <option value="freshchicken">freshchicken</option>
+                </select>
+
+                <div class="buttons">
+                    <button>Cancle</button>
+                    <button>Create</button>
+                    <button>Update</button>
+                </div>
+
+                
             </div>
+
 
             <div class="foodtable">
                 <table style="border: 1px solid black; border-collapse: collapse; width: 100%; text-align: left;">
