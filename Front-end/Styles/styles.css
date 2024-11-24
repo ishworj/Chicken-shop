@@ -242,6 +242,7 @@
         background-color: rgb(220, 180, 46); /* Optional background color */
         text-align: left;
         margin-bottom: 2px;
+        padding-top:10rem;
     }
 
     /* Hot Food Item Styles */
@@ -362,7 +363,7 @@
     }
     
     p {
-        margin: 10px 0; /* Space between paragraphs */
+        margin: 10px 0; 
     }
     
 
@@ -519,7 +520,45 @@ footer {
         
     }
 
+    .viewitem{
+    top:50%;
+    left: 50%;
+    width: 100%;
+    max-width: 80%;
+    justify-items: center;
+   
+    }
+
+    .viewitem img{
+        width: 100%;
+        
+        
+    }
+
+    #selecteditem{
+        gap: 1em;
+        align-items: center;
+        
+    }
+
+    #b{
+    justify-content: center;
+    }
     
+    .formdiv form{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
 
+    }
+    .formdiv{
+        margin: 1em;
+    }
 
+    .bodyimagediv {
+        height: 80vh;
+        
+    }
+    
 }

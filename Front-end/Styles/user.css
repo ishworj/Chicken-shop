@@ -1,16 +1,116 @@
-*{
- justify-content: center;
- align-items: center;
- justify-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; 
 }
+
+.wrapper{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.imgcontainer{
+    background: url(../Images/order-Online-img/bodyimage.jpg) no-repeat center ;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glassmorphism {
+    position: absolute;
+    top: 100px;
+    backdrop-filter: blur(3px);
+    height: calc(100vh - 100px);
+    width: 100vw;
+}
+
+.formContainer{
+    background: rgba(220, 179, 46, 0.807);;
+    border: 1px solid rgba(220, 179, 46, 0.175);
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    height: 22rem;
+}
+
+.animation{
+    margin-top: 20px;
+    height :60px;
+    width:50px;
+    font-size: 40px;
+    align-self: center;
+}
+
+.loginContainer {
+    display: flex; 
+    flex-direction: column;
+    margin: 1em 1em;
+    padding: 1em;
+    height: fit-content;
+    background-color: rgba(220, 179, 46, 0.418);
+    align-self: center;
+}
+
+h4{
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+#loginButton{
+    width: 50%;
+    align-self: center;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 5px white ;
+    color: black;
+}
+
+#loginButton + p{
+    align-self: center;
+}
+
+.loginContainer button:last-child {
+    background-color: #4CAF50; 
+    border: none;
+    width: fit-content;
+    align-self: center;
+    padding: 1px;
+    box-shadow: 1px 1px 5px white  ;
+}
+
 
 .registerContainer{
-    align-self: center;
-    border: 1px solid rgb(236, 69, 69);
-    height: fit-content;
-    width: 20vh;
-    margin-top: 20vh;
-    padding: 10dvh;
-   display: none;
+    background: rgba(220, 179, 46, 0.807);;
+    border: 1px solid rgba(220, 179, 46, 0.175);
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    width: 18rem;
+    height:fit-content;
+    padding: 1rem;
+    gap:0px;
 }
 
+.registerContainer > label,
+.registerContainer > input {
+    align-self:flex-start;
+    align-self: flex-start;
+    width: 100%;
+}
+.registerContainer > *{
+    margin-bottom: .5em;
+}

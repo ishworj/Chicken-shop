@@ -110,11 +110,28 @@
 
 
     function  displayLogin(){
-        document.querySelector(".loginContainer").style.display="block";
+        document.querySelector(".formContainer").style.display="flex";
         document.querySelector(".registerContainer").style.display="none";
     }
 
     function displayRegister(){
-        document.querySelector(".registerContainer").style.display="block";
-        document.querySelector(".loginContainer").style.display="none";
+        document.querySelector(".registerContainer").style.display="flex";
+        document.querySelector(".formContainer").style.display="none";
     }
+
+
+
+
+// Add event listeners for both 'click' and 'blur' events
+document.getElementById("l-password").addEventListener('click',()=> changeEmoji('click'));
+
+document.getElementById("l-password").addEventListener('blur',()=> changeEmoji('blur'));
+
+// Function to change emoji based on whether it's clicked or not
+function changeEmoji(clickedOrnot) {
+    if (clickedOrnot === 'click') {  // Correct equality check
+        document.getElementById("emoji").textContent = "🙄";  // Change emoji on click
+    } else {
+        document.getElementById("emoji").textContent = "😀";  // Reset emoji when not clicked
+    }
+}
